@@ -1,0 +1,535 @@
+<!DOCTYPE HTML>
+<!-- <html lang="en-US"> -->
+<html lang="en-US" class="fade">
+<!-- 
+  ^ a class of "fade" makes slides fade smoothly into one another
+ -->
+<!-- <html lang="en-US" class="nonumbers"> -->
+<!-- 
+  If you want no numbers on the slides add a "nonumbers" class 
+  to the HTML element.
+  Adding a class of "fade" will make slides fade into another. 
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>FirefoxOS: The Web is the Plattform</title>
+<!-- 
+  If you upload your slides to the web, ensure that you have 
+  a good title - this shows up in search results and social
+  media links
+ -->
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+  <style type="text/css">
+    div[id$='bullets'].slide > div::after {
+      content: 'For Information only, do NOT present';
+      background: rgba(200,0,0,0.5);
+      color: #fff;
+      position: absolute;
+      top: 20px;
+      right: 0;
+      padding: 5px 20px;
+      transform: rotate(90deg) translate(52%,-150px);
+      border-radius: 5px;
+    }
+    .full div[id$='bullets'].slide > div::after {
+      animation: wiggle alternate 1s infinite;
+    }
+    @keyframes wiggle {
+      from {
+        transform: rotate(90deg) translate(52%,-150px);
+      }
+      to {
+        transform: rotate(90deg) translate(52%,-160px);
+      }
+    }
+    .demourl {
+      bottom: 10px;
+    }
+  </style>
+</head>
+<body class="list">
+
+  <header class="caption">
+    <h1>Present and future of FirefoxOS</h1>
+    <p class="footer">
+      Alberto Pastor,
+      Twitter: <a href="http://twitter.com/pastoret">@pastoret</a>
+      eMail: <a href="mailto:apastor@mozilla.com">apastor@mozilla.com</a>
+      Github: <a href="http://github.com/albertopq">@albertopq</a>
+    </p>
+  </header>
+  <aside class="talkdescription">
+    <p>This slide deck is using the shower system - roll over the previews to see the notes and click any slide to go into presentation mode. Then use keys to navigate. <button onclick="goFullScreen()">Go fullscreen</button></p>
+    <p class="abstract">
+      <strong>Abstract: </strong>
+       Add your talk abstract here
+    </p>
+  </aside>
+
+<!-- 
+    Simply copy the whole block for each slide you want.
+  Special slides get extra classes. Each slide needs an ID 
+  to allow for bookmarking and target jumping.
+-->
+
+  <div id="cover" class="slide"><div>
+    <section>
+      <header>
+        <h2>About me</h2>
+      </header>
+      <h3>Alberto Pastor</h3>
+      <img style="float:left; margin: 1rem" src="pictures/templatedemos/avatar.png">
+      <p>
+        Twitter: <a href="http://twitter.com/pastoret">@pastoret</a><br/>
+        eMail: <a href="mailto:apastor@mozilla.com">apastor@mozilla.com</a><br/>
+        Github: <a href="http://github.com/albertopq">@albertopq</a><br/>
+      </p>
+      <footer class="notes">
+        This is a simple cover slide with an image in the middle
+      </footer>
+    </section>
+  </div></div>
+
+
+<!-- end slide block -->
+
+<!-- ===================================================================
+Firefox OS 
+======================================================================== -->
+
+  <div id="intro" class="slide"><div>
+    <section>
+      <header>
+        <h2>Mozilla Firefox OS</h2>
+      </header>
+      <img src="pictures/fxos/firefoxos.png" 
+           alt="Firefox OS" 
+           class="middle" height="450">
+    <footer class="notes">
+      This is the intro slide. We are going to talk about who is Mozilla and its goals and about FirefoxOs present and future.
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="mozilla" class="slide"><div>
+    <section>
+      <header>
+      </header>
+      <img src="pictures/fxos/mozilla.png" class="middle" height="450">
+    <footer class="notes">
+      Mozilla is a non profit organization that works on keeping the web as global public resource, acessible for everybody
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="chrome-vs-firefox" class="slide cover w"><div>
+    <section>
+      <header>
+      </header>
+      <img src="pictures/fxos/Chrome-VS-Firefox.jpg" class="middle" height="450">
+    <footer class="notes">
+      Basically, we are the good guys. But having different alternatives in the Browser market is not a bad thing. We achieved that! People should be free to choose the user agent that works better for them.
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="manifesto" class="slide"><div>
+    <section>
+      <header>
+        <h2>Mozilla Manifesto</h2>
+      </header>
+      <ul class="inner">
+        <li class="active">The Internet is a <strong>global public resource</strong> that must <strong>remain open</strong> and <strong>accessible</strong>.</li>
+        <li>The <strong>Internet should enrich the lives</strong> of individual human beings.</li>
+        <li>Individuals' <strong>security</strong> on the Internet is <strong>fundamental</strong> and cannot be treated as optional.</li>
+        <li>Individuals must have the <strong>ability to shape their own experiences</strong> on the Internet.</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="firefoxos" class="slide"><div>
+    <section>
+      <header>
+        <h2>FirefoxOS</h2>
+      </header>
+      <img src="pictures/fxos/firefoxos.png" 
+           alt="Firefox OS" 
+           class="middle" height="450">
+    <footer class="notes">
+      This is the intro slide to Firefox OS - explain that it is a new operating system, one completely based on open web technologies and aimed at the markets that others don't cover. Both fulfilling the promises made by other platforms and following the principles defined in the Mozilla Manifesto.
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="why-os" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Why a new OS?</h2>
+      </header>
+      <img src="pictures/fxos/15471_700x.jpg" 
+           alt="Firefox OS" 
+           class="middle" height="450">
+    <footer class="notes">
+      Why should we create a new OS? If we think on our online lifes in the desktop world, and how it changed
+      within the years, we can see that we can do almost 99% of our daily activity with a Browser. It wasn't in that
+      way years ago, but Internet changed everything.
+      We knew the phone and computer before and after internet.
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="what-internet" class="slide cover w"><div>
+    <section>
+      <header>
+      </header>
+      <img src="pictures/fxos/internet-privacy-cartoon2.jpg" 
+           alt="Firefox OS" 
+           class="middle" height="450">
+    <footer class="notes">
+      Few weeks ago asked to my nephew about internet. He replied, "I think mum has an app for that on the iPad".
+      New people connecting to the internet doesn't actually know what that means. All what they see are apps with content.
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="bad-apps" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>What is an App?</h2>
+      </header>
+    <img src="pictures/fxos/apps2.png" class="middle" height="450">
+    <footer class="notes">
+      Native apps are great in some aspects, but they are mainly great because the
+      OS is not allowing the web to do what native apps do.
+      In the web, I can just write something and publish it. I'm free to share my thoughts with the world without nobody reviewing it.
+      We already have a standard language that works everywhere. Why do we need more?
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="bad-marketplace" class="slide"><div>
+    <section>
+      <header>
+        <h2>Differences between apps and webs</h2>
+      </header>
+      <ul class="inner">
+        <li class="active">They work offline</li>
+        <li>Transitions</li>
+        <li>More integrated with the phone</li>
+        <li>"Prettier"</li>
+        <li>Access content without typing URL's</li>
+      </ul>
+    <footer class="notes">
+      People's answers to the question: "What's the difference between apps and webs?"
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="do-we-need-apps" class="slide cover w"><div>
+    <section>
+      <header>
+      </header>
+      <img src="pictures/fxos/philosoraptor-t2.jpg" class="middle" width="450">
+    <footer class="notes">
+      Is that enough for creating apps?
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="real-answers" class="slide"><div>
+    <section>
+      <header>
+        <h2>Real answers</h2>
+      </header>
+      <ul class="inner">
+        <li class="active">Phone interaction changed</li>
+        <li>Good web apps</li>
+        <li>Plattform allowing to do it</li>
+      </ul>
+    <footer class="notes">
+      Under those answers, what people is actually saying is that the interaction with the phone changed. We don't have mouse and keyboard anymore. Are the native apps the answer to that, or should we move the web to that new paradigm? Are the current plattforms going to allow us to do it?
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="welcome-firefoxos" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Welcome to FirefoxOS</h2>
+      </header>
+      <img src="pictures/fxos/ffos.jpg" class="middle" width="450">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="layers" class="slide cover"><div>
+    <section>
+      <header>
+        <h2>FirefoxOS Layers</h2>
+      </header>
+      <img src="pictures/fxos/layers.png" 
+           alt="firefox os emulator and source" 
+           class="middle shadow" height="450">
+    <footer class="notes">
+      Firefox OS is not another closed platform. Everything in the OS is open web technology and based on proposals to the standards bodies. This means the research we did by building Firefox OS and the research you do by making your apps work on it gets fed back to Firefox on Desktop and all the other browsers, too, making the web a better place.
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="webtech" class="slide cover"><div>
+    <section>
+      <header>
+        <h2>Everything in the OS is open web technology and standard proposals</h2>
+      </header>
+      <img src="pictures/fxos/firefox-os-emulator.jpg" 
+           alt="firefox os emulator and source" 
+           class="middle shadow" height="450">
+    <footer class="notes">
+      Firefox OS is not another closed platform. Everything in the OS is open web technology and based on proposals to the standards bodies. This means the research we did by building Firefox OS and the research you do by making your apps work on it gets fed back to Firefox on Desktop and all the other browsers, too, making the web a better place.
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="forall" class="slide"><div>
+    <section>
+      <header>
+        <h2>Upgrading the mobile world</h2>
+      </header>
+      <figure class="right shadow frame">
+        <img src="pictures/fxos/nokia-photos.jpg" 
+             alt="Nokia couldn't take photos"
+             height="400">
+      </figure>
+      <ul class="inner">
+        <li class="active">Targeted at new, emerging markets</li>
+        <li>Very affordable hardware</li>
+        <li>Cost control aware</li>
+        <li>Web technologies through and through</li>
+        <li>Standarizing APIs</li>
+      </ul>
+      <footer class="notes">
+        Firefox OS was created to bring users of feature phones into the web-enabled mobile world. It is meant to cater to the markets not covered by iOS and Android. Yes, you can buy cheap Androids world-wide but the version of Android they support doesn't have an out-of-the-box browser that allows you to do interesting things on the web. Much like Firefox and Opera for Android allow more users world-wide to have a great web experience without having the latest hardware, Firefox OS goes further. Its main goal is to bring millions of new users to the web on their mobile devices without getting a second-grade experience.
+      </footer>
+    </section>
+  </div></div>
+
+
+  <div id="webapilist" class="slide"><div>
+    <section>
+      <header>
+        <h2>Enable hardware access</h2>
+      </header>
+      <ul class="lots">
+      <li>Vibration API</li>
+      <li>Screen Orientation</li>
+      <li>Geolocation API</li>
+      <li>Mouse Lock API</li>
+      <li>Open WebApps</li>
+      <li>Network Information API</li>
+      <li>Battery Status API</li>
+      <li>Alarm API</li>
+      <li>Push Notifications API</li>
+      <li>WebFM API / FMRadio</li>
+      <li>WebPayment</li>
+      <li>IndexedDB</li>
+      <li>Ambient light sensor</li>
+      <li>Proximity sensor</li>
+      <li>Notification</li>
+      </ul>
+      <p class="demourl">
+        <a href="https://hacks.mozilla.org/2013/02/using-webapis-to-make-the-web-layer-more-capable/">Using WebAPIs to make the web layer more capable</a>
+      </p>      
+      <footer class="notes">
+        The Web APIs available to hosted apps can already get you very far. A lot of them are already available across browsers and on Desktop, like the Battery API. Interesting are also Push Notifications and Vibration for interaction with the user. Privileged and certified apps can access everything.
+      </footer>
+    </section>
+  </div><button class="cb">x</button></div>
+
+  <div id="we-did-great" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>We did a lot!</h2>
+      </header>
+      <img src="pictures/fxos/effort-invest-time-like-ant.jpg" 
+           alt="firefox os emulator and source" 
+           class="middle shadow" height="450">
+    <footer class="notes">
+      We designed, implemented and released a mobile OS in 2 years!
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="android-1" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Android 1.0</h2>
+      </header>
+      <img src="pictures/fxos/Apple-Pie-1.0-lock-screen-home-screen-y-Android-Market.jpg" 
+           alt="firefox os emulator and source" 
+           class="middle shadow" height="450"/>
+    <footer class="notes">
+      This is the first Android version
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="want-more" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>But we want more!</h2>
+      </header>
+      <img src="pictures/fxos/I-want-more.jpg" 
+           alt="firefox os emulator and source" 
+           class="middle shadow" height="450"/>
+    <footer class="notes">
+      But that's not enough. We want to have impact in the market, and move the mobile industry to the web.
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="goals" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          New target, new goals
+        </h2>
+      </header>
+      <img src="pictures/fxos/quote.png">
+      <ul class="inner">
+        <li class="active">Privacy</li>
+        <li>Customization</li>
+        <li>Bring the web to the mobile world</li>
+      </ul>
+      <footer class="notes">
+        
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="offline" class="slide"><div>
+    <section>
+      <header>
+        <h2>Let's merge web and apps world</h2>
+      </header>
+      <ul class="inner">
+        <li class="active">Service Workers --> Work Offline</li>
+        <li>Pre-rendering --> Faster with transitions</li>
+        <li>WebComponents --> Prettier and more integrated</li>
+      </ul>
+      <footer class="notes">
+        
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="new-features" class="slide"><div>
+    <section>
+      <header>
+        <h2>New features coming</h2>
+      </header>
+      <ul class="inner">
+        <li class="active">Security: <strong>Tracking Protection</strong></li>
+        <li>Customization: <strong>Addons</strong></li>
+        <li>Bring the web to the mobile world: <strong>Pinning the web</strong></li>
+      </ul>
+      <footer class="notes">
+        
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="not-easy" class="slide cover w"><div>
+    <section>
+      <header>
+      </header>
+      <img src="pictures/fxos/not-easy.JPG">
+      <footer class="notes">
+        
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="already-did" class="slide w"><div>
+    <section>
+      <header>
+        <h2>But we already did it</h2>
+      </header>
+      <img src="pictures/fxos/stats.png">
+      <small class="credits">
+        <a href="http://www.w3schools.com/browsers/browsers_stats.asp">http://www.w3schools.com/browsers/browsers_stats.asp</a>
+      </small>
+      <footer class="notes">
+        
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="we-need-help" class="slide cover w"><div>
+    <section>
+      <header>
+      </header>
+      <img src="pictures/fxos/needyou1.jpg" 
+           alt="firefox os emulator and source" 
+           class="middle shadow" height="450">
+    <footer class="notes">
+      Still a lot of work to do
+    </footer>
+    </section>
+  </div></div>
+
+
+  <div id="participation" class="slide"><div>
+    <section>
+      <header>
+        <h2>Where do I start?</h2>
+      </header>
+      <a href="https://firefoxos.mozilla.community/">Participation Hub</a>
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="thanks" class="slide"><div>
+    <section>
+      <header>
+        <h2>Thanks</h2>
+      </header>
+      <img src="pictures/fxos/23576067.jpg" class="right" alt="Red panda (Firefox)">
+      <ul class="nobull">
+        <li>Alberto Pastor</li>
+        <li>System Frontend FirefoxOS Engineer</li>
+        <li><a href="http://twitter.com/pastoret">@pastoret</a></li>
+      </ul>
+    <footer class="notes">
+    </footer>
+
+    </section>
+  </div></div>
+
+  <div id="links" class="slide"><div>
+    <section>
+      <header>
+        <h2>Resources</h2>
+      </header>
+      <ul>
+        <li><a href="http://bugzilla.mozilla.org">http://bugzilla.mozilla.org</a></li>
+        <li><a href="https://developer.mozilla.org/es/Firefox_OS/Gaia/Hacking">https://developer.mozilla.org/es/Firefox_OS/Gaia/Hacking</a></li>
+        <li><a href="https://firefoxos.mozilla.community/">https://firefoxos.mozilla.community/</a></li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress"><div></div></div>
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
