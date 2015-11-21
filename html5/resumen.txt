@@ -1,0 +1,25 @@
+- Voy a hablar de Mozilla Firefox OS
+
+- Remarcar Mozilla // FirefoxOS
+
+	- Explicar Mozilla. Manifesto, contexto en el que nace, objetivos
+
+	- Explicar FirefoxOS. Objetivo, tecnologia, concepto de app
+		Demo
+
+- Como empezó, como conseguimos hacerlo funcionar
+	- Aplicaciones con 1 sola vista
+	- Poca separación entre Datos y Vista
+	- 
+
+- Ahora que ya tenemos un SO estable, es momento de aplicar lo que hemos aprendido
+
+	- Separar Datos y UI
+	- Service Workers
+	- Iframes - prerendering - urls
+	- Pinning the Web (demo)
+	- WebComponents (demo)
+
+- Mucho trabajo por hacer
+	- Participation Hub
+	- 5 telefonos
